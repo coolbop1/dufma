@@ -105,3 +105,21 @@ header #home{
   border-radius:50%;
   border:2px solid white;
 }
+#profilesummary{
+  width:100%;
+  background:#191919;
+  color:white;
+  padding:10px 0;
+}
+#menulist ul{
+  list-style:none;
+} 
+#menulist li{
+  padding:15px;
+  font-weight:600;
+  color:#555555;
+}
+#menulist a{
+  text-decoration:none;
+  color:#555555;
+}
