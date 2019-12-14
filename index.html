@@ -14,9 +14,10 @@
 	</head>
 	<body >
 	  <div class="drawin" id="menuslider">
+	    <div id="topslid">
 	    <div id="profilesection">
 	      <div class="thumb">
-	        <img class="profileimg" src="images/avatar.png">
+	        <img class="profileimg" src="https://picsum.photos/100">
 	       </div>
 	    </div>
 	    <div id="profilesummary">
@@ -25,6 +26,7 @@
 	         <br/>
 	         user@email.com
 	       </center>
+	     </div>
 	     </div>
 	     <div id="menulist">
 	       <ul>
@@ -56,7 +58,59 @@
 	    </div>
 	   <img src="images/Login.png" class="signinicon">
 	  </header>
-	  
+	  <section>
+	    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://picsum.photos/202" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://picsum.photos/201" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://picsum.photos/200" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+	  </section>
+	  <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
