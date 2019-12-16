@@ -119,13 +119,14 @@ header #home{
   overflow:auto;
 }
 
-#menulist ul{
-  list-style:none;
-} 
-#menulist li{
+#menulist div{
   padding:15px;
   font-weight:600;
   color:#555555;
+}
+#menulist i{
+  font-size:24px;
+  margin:0 20px
 }
 #menulist a{
   text-decoration:none;
