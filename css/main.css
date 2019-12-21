@@ -11,7 +11,7 @@ body{
   background-color:#dfe2db;
 }
 header{
-  background-color:#32CD32;
+  background-color:seagreen;
   padding:20px 0;
   width:100%;
   color:white;
@@ -67,7 +67,7 @@ header #home{
   min-height:20%;
 }
 #profilesection{
-  background:#32CD32;
+  background:seagreen;
   width:100%;
   padding-top:20px;
   padding-bottom:20px;
@@ -182,7 +182,7 @@ body {font-family: Verdana, sans-serif;}*/
   position: relative;
   margin: auto;
   min-height:180px;
-  background:#32CD32;
+  background:seagreen;
   color:white;
 }
 
