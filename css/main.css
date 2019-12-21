@@ -8,6 +8,7 @@ body{
   margin:0;
   height:100%;
   position:relative;
+  background-color:#dfe2db;
 }
 header{
   background-color:#32CD32;
@@ -15,6 +16,8 @@ header{
   width:100%;
   color:white;
   position:relative;
+  box-shadow:#000 1px 2px 6px;
+  z-index:1;
 }
 #menu{
 	top:17px;
@@ -132,6 +135,32 @@ header #home{
   text-decoration:none;
   color:#555555;
 }
+
+#transacthistory{
+  padding:15px;
+  font-weight:500;
+}
+
+#searchbar{
+  height:15px;
+  padding:10px;
+  width:90%;
+  background:#ffffff;
+  position:relative;
+  float:none;
+  clear:both;
+  border-radius:5px;
+  margin: 5px auto;
+}
+
+#searchbar input{
+  height:100%;
+  width:calc(100% - 30px);
+  float:right;
+  border:none;
+  
+ 
+}
 /* {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}*/
 .mySlides {
@@ -152,6 +181,20 @@ body {font-family: Verdana, sans-serif;}*/
   width:100%;
   position: relative;
   margin: auto;
+  min-height:180px;
+  background:#32CD32;
+  color:white;
+}
+
+ #walletBalance{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  position:relative;
+  padding-top: 20px;
+  width:100%;
+  margin: auto;
+  
 }
 
 /* Caption text */
@@ -195,6 +238,20 @@ body {font-family: Verdana, sans-serif;}*/
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
+.eachhistory{
+  background:#fff;
+  padding:10px;
+  width:90%;
+  height:70px;
+  border-radius:5px;
+  margin:auto;
+}
+
+.debithistory{
+  border-left:3px solid red;
+}
+
 
 @-webkit-keyframes fade {
   from {opacity: .4} 
