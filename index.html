@@ -14,107 +14,42 @@
 			
 	
 	</head>
-	<body >
-	  <div class="drawin" id="menuslider">
-	    <div id="topslid">
-	    <div id="profilesection">
-	      <div class="thumb">
-	        <img class="profileimg" src="images/images.jpeg">
-	       </div>
-	    </div>
-	    <div id="profilesummary">
-	       <center>
-	         Annonimous tester
-	         <br/>
-	         user@email.com
-	       </center>
-	     </div>
-	     </div>
-	     <div id="menulist">
-	       
-	         <a href="index.html"><div><i class="fa fa-home" ></i>Home</div></a>
-	         <a href="#"><div><i class="fa fa-street-view" ></i>Farmers/outgrowers</div></a>
-	         <a href="#"><div><i class="fa fa-handshake-o" ></i>Agricultural Partners</div></a>
-	         <a href="#"><div><i class="fa fa-shopping-cart" ></i>Markets</div></a>
-	        <a href="wallet.html"><div><i class="fas fa-tablet fa-rotate-270" data-fa-transform="rotate--90"></i>Wallet</div></a>
-	         <a href="#"><div><i class="fa fa-paw" ></i>Affiliation Program</div></a>
-	         <a href="#"><div><i class="fa fa-gear" ></i>Account/Settings</div></a>
-	         <a href="#"><div><i class="fa fa-comments-o"></i>Feedback/Chat/Report</div></a>
-	         <a href="#"><div><i class="fa fa-user"></i>Profile</div></a>
-	       
-	     </div>
-	  </div>
-	  <div class="drawunder" id="overlay">
-	    
-	  </div>
-	  <header>
-	    <div class="big" id="menu">
-        	<div id="fcros" class="cros"></div>
-        	<div id="mid" class=" mid"></div>
-        	<div id="scros" class="cro"></div>
-        </div>
-	    <div id="home">
-	      
-			    Home
-			   
-	    </div>
-	    <div id="signinicon">
-	     <img src="images/Login.png" width="25px">
-	    </div>
-	  </header>
-	 
-	    <div class="slideshow-container">
+    <body style="width: 100%;height: 100%;background-image: url(images/markus.jpg);background-repeat: no-repeat;background-position: center;vertical-align: middle;">
+        <section style="width: 100%; height: 100%;background-color: rgba(0, 0, 0, 0.7);">
+        <center>
+            <div style="padding-top: 10px">
+                <img src="images/logo.png" width="200">
+                <br/> 
+            <form action="home.html">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="images/adele.jpg">
-  <div class="text">Caption Text</div>
-</div>
+                <div style="background-color: white;width: 80%; position: relative;">
+                    <p style="color: white; position: absolute; top: -45px">
+                        Username
+                    </p>
+                    <i style="color:black" class="fa fa-user"></i> <input type="text" style="padding:20px 10px; width: 80%;border: none;">
+                </div>
+                <br/> &nbsp; <br/>
+                <div style="background-color: white;width: 80%; position: relative;">
+                    <p style="color: white; position: absolute; top: -45px">
+                        Password
+                    </p>
+                    <i style="color:black" class="fa fa-lock"></i> <input type="password" style="padding:20px 10px; width: 80%;border: none;">
+                </div>
+                <br/> &nbsp; <br/>
+                <div style="width: 80%;">
+                    <input type="submit" value="Login" style="padding:20px 10px; width: 100%; background-color:seagreen;color:white;font-size: medium;">
+                </div>
+                <br/> &nbsp; <br/>
+            </form>
+            </div>
+        </center>
+        <p style="color: white; position: absolute; bottom: 8px; left:12px">
+            Forgot Password
+        </p>
+        <p style="color: white; position: absolute; bottom: 8px; right:12px">
+            Create Account
+        </p>
+        </section>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="images/joao.jpg">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="images/roman.jpg">
-  <div class="text">Caption Three</div>
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-
-
-	  
-	  <script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
-		<script src="js/main.js"></script>
-	</body>
-</html>
+    </body>
+    </html>
