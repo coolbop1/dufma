@@ -19,6 +19,27 @@ header{
   box-shadow:#000 1px 2px 6px;
   z-index:1;
 }
+.subtitle{
+  padding-left: 20px;
+  font-size: large;
+  font-weight: 600;
+}
+.notifyspace{
+  position: relative;
+  width: 100%;
+}
+.clearnotice{
+  position: absolute;
+  top:-10px;
+  right: 10px;
+  cursor: pointer;
+}
+.red{
+  color:red;
+}
+.brand{
+  color:seagreen;
+}
 #menu{
 	top:17px;
 	position:absolute;
@@ -246,6 +267,17 @@ body {font-family: Verdana, sans-serif;}*/
   height:70px;
   border-radius:5px;
   margin:10px auto;
+  border-radius: 5px;
+}
+.eachnotice{
+  color: #fff;
+  background:#191919;
+  padding:1px 10px;
+  width:90%;
+  min-height:70px;
+  border-radius:5px;
+  margin:10px auto;
+  border-radius: 5px;
 }
 
 .debithistory{
