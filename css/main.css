@@ -3,7 +3,7 @@ html{
 	height:100%;
 }
 body{
-    font-family:'Dosis';
+    font-family:'K2D';
   padding:0;
   margin:0;
   height:100%;
@@ -356,6 +356,16 @@ body {font-family: Verdana, sans-serif;}*/
 #signinicon img{
   display:none;
 }
+#footer{
+  float:none;
+  clear:both;
+  padding:10px;
+  background-color:#191919;
+  color:white
+}
+#footer #mobile-foot{
+  display:none;
+}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 600px) {
   .text {font-size: 11px}
@@ -379,14 +389,34 @@ body {font-family: Verdana, sans-serif;}*/
   float:none;
   width: calc(100% - 30px);
   padding-top: 0;
+  margin-bottom:50px;
 }
-#signinicon image{
+#signinicon img{
   display:block;
 }
 #signinicon table{
   display:none;
 }
 #footer{
+  width:100%;
+  padding:0;
+  background-color:white;
+  color:#666;
+  position:fixed;
+  bottom:0;
+  box-shadow:#000 1px 2px 6px;
+  
+  
+}
+#footer #web-foot{
   display:none;
 }
+#footer #mobile-foot{
+  display:block;
+  width:100%;
+}
+#mobile-foot table{
+  width: 100%;
+}
+
 }
