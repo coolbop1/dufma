@@ -91,7 +91,7 @@ header #home{
 }
 #signinicon{
   position:absolute;
-  top:25px;
+  top:20px;
   right:30px;
 }
 #menuslider{
@@ -164,6 +164,13 @@ header #home{
 }
 
 #menulist div{
+  padding:25px;
+  font-weight:600;
+  color:#555555;
+  border-top:1px solid #cccccc;
+}
+
+.menulist div{
   padding:25px;
   font-weight:600;
   color:#555555;
@@ -333,6 +340,17 @@ body {font-family: Verdana, sans-serif;}*/
   color: #ccc;
 }
 
+.nav{
+  padding:15px 25px;
+}
+
+.active-nav, .nav:hover{
+  background-color: #fff;
+  color:seagreen;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
 
 @-webkit-keyframes fade {
   from {opacity: .4} 
@@ -427,7 +445,7 @@ body {font-family: Verdana, sans-serif;}*/
   height:50px;
   background-color:seagreen;
   border-radius:25px;
-  box-shadow:#000 1px 2px 6px;
+  box-shadow:#000 1px 2px 3px;
 }
 
 .round-button i{
