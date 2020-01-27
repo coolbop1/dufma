@@ -99,10 +99,45 @@ header #home{
   background:#ffffff;
   float:left;
 }
-#main-content{
+.main-content{
+  position: relative;
   width: calc(70% - 30px);
+  left:0;
+  transition:1s left;
   float: right;
   padding: 15px;
+  z-index: -4;
+}
+.side-content{
+  position: absolute;
+  width: calc(70% - 30px);
+  left:-170%;
+  transition:1s left;
+  float: right;
+  padding: 15px;
+  z-index: -4;
+  overflow: hidden;
+}
+.hide-main-content{
+  position: absolute;
+  left:-70%;
+  transition:1s left;
+}
+.show-side-content{
+  position: relative;
+  left:0;
+  transition:1s left;
+}
+
+.farmers-hide{
+  position: absolute;
+  left:-100%;
+  transition:1s left;
+}
+.farmers-show{
+  position: relative;
+  left:0;
+  transition:1s left;
 }
 #topslid{
   min-height:20%;
@@ -234,6 +269,13 @@ body {font-family: Verdana, sans-serif;}*/
   background-color: seagreen;
   color:white;
 }
+.slideshow-contain{
+  width:100%;
+  position: relative;
+  margin: auto;
+  background-color: seagreen;
+  color:white;
+}
 
  #walletBalance{
   color: white;
@@ -339,6 +381,20 @@ body {font-family: Verdana, sans-serif;}*/
 .ashtext {
   color: #ccc;
 }
+.black{
+  color:black
+}
+.large-name{
+  font-size: medium;
+}
+.farmers-nav{
+  padding: 10px 0;
+  color:#666;
+}
+.farmers-nav-active{
+  color: #fff;
+  border-bottom:3px solid white ;
+}
 
 .nav{
   padding:15px 25px;
@@ -401,11 +457,21 @@ body {font-family: Verdana, sans-serif;}*/
 #menuslider{
   display: none;
 }
-#main-content{
+.main-content{
   float:none;
   width: 100%;
+  left:0;
+  transition:1s left;
   padding: 0;
   margin-bottom:65px;
+  z-index: -4;
+}
+.hide-main-content{
+  left:-100%;
+  transition:1s left;
+}
+.side-content{
+  display: none;
 }
 #signinicon img, .mobile-menu{
   display:block;
