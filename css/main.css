@@ -102,6 +102,7 @@ header #home{
 .main-content{
   position: relative;
   width: calc(70% - 30px);
+  top: 0;
   left:0;
   transition:1s left;
   float: right;
@@ -121,6 +122,7 @@ header #home{
 .hide-main-content{
   position: absolute;
   left:-70%;
+  top: -200%;
   transition:1s left;
 }
 .show-side-content{
@@ -537,7 +539,7 @@ font-size: medium;
 }
 .side-content{
   float:none;
-  width:calc(100% - 20px);
+  width:calc(100% - 30px);
 }
 .eachgroup{
   width: calc(100% - 20px);
