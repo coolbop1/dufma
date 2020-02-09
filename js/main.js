@@ -4,11 +4,12 @@ const darkOverlay = document.querySelector('#overlay');
 darkOverlay.addEventListener("click", push);
 */
 const farmerButton = document.querySelector("#farmer-tab");
-const roundFarmButton = document.querySelector("#farmer-tabs")
+const marketButton = document.querySelector("#market-tab");
 const mainContent = document.querySelector(".main-content");
 const sideContent = document.querySelector(".side-content");
+const sideMarket = document.querySelector(".side-market-content");
+marketButton.addEventListener("click", pushmarket);
 farmerButton.addEventListener("click", push);
-roundFarmButton.addEventListener("click", push)
 
 const farmersList = document.querySelector("#slidelist-0");
 const groupsList = document.querySelector("#slidelist-1");
@@ -18,13 +19,23 @@ groupsList.addEventListener("click", draw);
 productsList.addEventListener("click", draw);
 
 function push() {
+  sideMarket.classList.remove("show-side-market-content")
   if(mainContent.classList.contains("hide-main-content")){
     mainContent.classList.remove("hide-main-content")
     sideContent.classList.remove("show-side-content")
   }else{
     mainContent.classList.add("hide-main-content")
     sideContent.classList.add("show-side-content")
+    
   }
+}
+
+function pushmarket() {
+  
+    mainContent.classList.add("hide-main-content")
+    sideMarket.classList.add("show-side-market-content")
+    sideContent.classList.remove("show-side-content")
+  
 }
 function draw() {
   console.log("hiiiii");

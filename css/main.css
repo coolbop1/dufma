@@ -109,7 +109,7 @@ header #home{
   padding: 15px;
   z-index: -4;
 }
-.side-content{
+.side-content, .side-market-content{
   position: absolute;
   width: calc(70% - 30px);
   top:-100%;
@@ -126,7 +126,7 @@ header #home{
   top: -200%;
   transition:1s left;
 }
-.show-side-content{
+.show-side-content, .show-side-market-content{
   position: relative;
   top:0;
   transition:1s top;
@@ -188,13 +188,30 @@ header #home{
   padding: 20px;
   overflow: hidden;
 }
+.marketdesc{
+  width: calc(60% - 10px);
+  padding-left: 10px;
+  overflow: hidden;
+  float: left;
+}
+
+.marketdesc table tr{
+  margin-top: 15px;
+}
+
 .groupimg{
   height: 100px;
   width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.thumb img,.groupimg img{
+.marketimg{
+  height: 100%;
+  width: 40%;
+  float:left;
+}
+
+.thumb img,.groupimg img,.marketimg img{
   height:100%;
   width:100%;
   object-fit:cover;
@@ -408,6 +425,14 @@ font-size: medium;
   height: 200px;
   float: left;
 }
+.eachmarket{
+  background:#fff;
+  margin:10px;
+  width: calc(33% - 20px);
+  box-shadow: #666 1px 1px 4px;
+  height: 110px;
+  float: left;
+}
 .eachnotice{
   color: #fff;
   background:#191919;
@@ -538,11 +563,11 @@ font-size: medium;
   left:-100%;
   transition:1s left;
 }
-.side-content{
+.side-content, .side-market-content{
   float:none;
   width:calc(100% - 30px);
 }
-.eachgroup{
+.eachgroup, .eachmarket{
   width: calc(100% - 20px);
 }
 #signinicon img, .mobile-menu{
