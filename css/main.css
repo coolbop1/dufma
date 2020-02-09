@@ -118,6 +118,7 @@ header #home{
   padding: 15px;
   z-index: -4;
   overflow: hidden;
+  margin-bottom: 80px;
 }
 .hide-main-content{
   position: absolute;
