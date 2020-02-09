@@ -111,8 +111,8 @@ header #home{
 .side-content{
   position: absolute;
   width: calc(70% - 30px);
-  left:-170%;
-  transition:1s left;
+  top:-100%;
+  transition:1s top;
   float: right;
   padding: 15px;
   z-index: -4;
@@ -125,18 +125,21 @@ header #home{
 }
 .show-side-content{
   position: relative;
-  left:0;
-  transition:1s left;
+  top:0;
+  transition:1s top;
+  z-index: 0;
 }
 
 .farmers-hide{
   position: absolute;
   left:-100%;
+  top:-2000%;
   transition:1s left;
 }
 .farmers-show{
   position: relative;
   left:0;
+  top:0;
   transition:1s left;
 }
 #topslid{
@@ -178,10 +181,24 @@ header #home{
   width:80px;
   margin:auto
 }
-.thumb img{
+.groupdesc{
+  padding: 20px;
+  overflow: hidden;
+}
+.groupimg{
+  height: 100px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.thumb img,.groupimg img{
   height:100%;
   width:100%;
   object-fit:cover;
+}
+.groupimg img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .profileimg{
   border-radius:50%;
@@ -340,6 +357,54 @@ body {font-family: Verdana, sans-serif;}*/
   box-shadow: #666 2px 2px 8px;
   position: relative;
 }
+.eachproduct{
+  padding:10px;
+  margin:10px auto;
+  width:100%;
+  position: relative;
+  float:none;
+  clear: both;
+}
+.eachproduct table{
+width: 100%;
+}
+.productini{
+  width: 50px;
+}
+.productname{
+  width: calc(100% - 200px);
+  position: relative;
+  color: #000;
+} 
+.seemore i{
+  font-size: 30px;
+  color: #555555;
+}
+.littlethumb{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  color: #555555;
+  background-color: seagreen;
+  position: relative;
+}
+.littlethumb span{
+position: absolute;
+top: 10px;
+left: 15px;
+color: #f1f1f1;
+font-size: medium;
+}
+.eachgroup{
+  background:#fff;
+  margin:10px;
+  width: calc(33% - 20px);
+  border-radius: 5px;
+  box-shadow: #666 1px 1px 4px;
+  height: 200px;
+  float: left;
+}
 .eachnotice{
   color: #fff;
   background:#191919;
@@ -389,7 +454,7 @@ body {font-family: Verdana, sans-serif;}*/
 }
 .farmers-nav{
   padding: 10px 0;
-  color:#666;
+  color:#555555;
 }
 .farmers-nav-active{
   color: #fff;
@@ -464,23 +529,30 @@ body {font-family: Verdana, sans-serif;}*/
   transition:1s left;
   padding: 0;
   margin-bottom:65px;
-  z-index: -4;
+  z-index: 0;
 }
 .hide-main-content{
   left:-100%;
   transition:1s left;
 }
 .side-content{
-  display: none;
+  float:none;
+  width:calc(100% - 20px);
+}
+.eachgroup{
+  width: calc(100% - 20px);
 }
 #signinicon img, .mobile-menu{
   display:block;
 }
 .mobile-menu{
   margin:10px 0;
+
 }
 .mobile-menu table{
   width:100%;
+  position: relative;
+  z-index: 0;
 }
 #signinicon table{
   display:none;
