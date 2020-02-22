@@ -565,6 +565,7 @@ font-size: medium;
 }
 .side-content, .side-market-content{
   float:none;
+  top: -200%;
   width:calc(100% - 30px);
 }
 .eachgroup, .eachmarket{
@@ -576,6 +577,12 @@ font-size: medium;
 .mobile-menu{
   margin:10px 0;
 
+}
+.show-side-content, .show-side-market-content{
+  position: relative;
+  top:0;
+  transition:1s top;
+  z-index: 0;
 }
 .mobile-menu table{
   width:100%;
