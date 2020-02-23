@@ -77,9 +77,27 @@
 	     </div>
 	  </div>
 	  <div class="side-market-content">
+		<label style="margin-right: 50px;">MARKETPLACE <input id="buy" type="radio" onchange="cta(this.id)"  value="buy" name="marketop"></label>
+		<label>INVESTMENT <input id="invest"  type="radio" onchange="cta(this.id)" value="invest" name="marketop"></label>
+		<br/>&nbsp;<br/>
+		<div id="ctaarea" class="hides ctas">
+			<div id="titlequest"></div>
+			<br/>
+			<div class="twochoice">
+				<div id="choice-0" class="eachchoice rchoice market-nav-active">
+					<div>GRAINS</div>
+				</div>
+				<div id="choice-1" class="eachchoice lchoice">
+					<div>NUTS</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+		</div>
 		<div class="slideshow-contain">
-			<div >
-				<div class="eachmarket">
+			<div id="picked-0" class="market-show">
+				<legend style="padding: 20px;">GRAINS</legend>
+				<div class="eachmarket" onclick="showquant()">
 					<div class="marketimg">
 						<img src="images/markus.jpg" />
 				  
@@ -108,7 +126,7 @@
 				  
 				</div>
 
-				<div class="eachmarket">
+				<div class="eachmarket" onclick="showquant()">
 					<div class="marketimg">
 						<img src="images/markus.jpg" />
 				  
@@ -137,7 +155,38 @@
 				  
 				</div>
 
-				<div class="eachmarket">
+				<div class="eachmarket" onclick="showquant()">
+					<div class="marketimg">
+						<img src="images/markus.jpg" />
+				  
+					</div>
+					<div class="marketdesc">
+						<table>
+							<tr>
+								<td>
+									<span class=" black"><i class="fa fa-user brand"></i>  Supplier: JK Farms</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="black"><i class="fa fa-pie-chart brand"></i>  Quantity: 25KG</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="black"><i class="fa fa-usd brand"></i>  Price: 500</span>
+								</td>
+							</tr>
+						</table>
+						
+			
+					</div>
+				  
+				</div>
+	</div>
+	<div id="picked-1" class="market-hide">
+		<legend style="padding: 20px;">NUTS</legend>
+				<div class="eachmarket" onclick="showquant()">
 					<div class="marketimg">
 						<img src="images/markus.jpg" />
 				  
@@ -166,7 +215,7 @@
 				  
 				</div>
 
-				<div class="eachmarket">
+				<div class="eachmarket" onclick="showquant()">
 					<div class="marketimg">
 						<img src="images/markus.jpg" />
 				  
@@ -195,36 +244,7 @@
 				  
 				</div>
 
-				<div class="eachmarket">
-					<div class="marketimg">
-						<img src="images/markus.jpg" />
-				  
-					</div>
-					<div class="marketdesc">
-						<table>
-							<tr>
-								<td>
-									<span class=" black"><i class="fa fa-user brand"></i>  Supplier: JK Farms</span>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<span class="black"><i class="fa fa-pie-chart brand"></i>  Quantity: 25KG</span>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<span class="black"><i class="fa fa-usd brand"></i>  Price: 500</span>
-								</td>
-							</tr>
-						</table>
-						
-			
-					</div>
-				  
-				</div>
-
-				<div class="eachmarket">
+				<div class="eachmarket" onclick="showquant()">
 					<div class="marketimg">
 						<img src="images/markus.jpg" />
 				  
@@ -258,9 +278,195 @@
 		
 
 			</div>
+			<div id="pick-0" class="market-hide">
+				<legend style="padding: 20px;">GRAINS</legend>
+				<div class="eachmarket" onclick="showquant()">
+					<div class="marketimg">
+						<img src="images/markus.jpg" />
+				  
+					</div>
+					<div class="marketdesc">
+						<table>
+							<tr>
+								<td>
+									<span class=" black">Maize</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="black"><i class="fa fa-pie-chart brand"></i> Gestation:  12 month</span>
+								</td>
+							</tr>
+						</table>
+						
+			
+					</div>
+				  
+				</div>
+
+				<div class="eachmarket" onclick="showquant()">
+					<div class="marketimg">
+						<img src="images/markus.jpg" />
+				  
+					</div>
+					<div class="marketdesc">
+						<table>
+							<tr>
+								<td>
+									<span class=" black">Soyabean</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="black"><i class="fa fa-pie-chart brand"></i>  Gestation: 12 month</span>
+								</td>
+							</tr>
+						</table>
+						
+			
+					</div>
+				  
+				</div>
+
+				<div class="eachmarket" onclick="showquant()">
+					<div class="marketimg">
+						<img src="images/markus.jpg" />
+				  
+					</div>
+					<div class="marketdesc">
+						<table>
+							<tr>
+								<td>
+									<span class=" black">Sorghum</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="black"><i class="fa fa-pie-chart brand"></i>  Gestation 12 month</span>
+								</td>
+							</tr>
+						</table>
+						
+			
+					</div>
+				  
+				</div>
+			</div>
+			<div id="pick-1" class="market-hide">
+				<legend style="padding: 20px;">NUTS</legend>
+						<div class="eachmarket" onclick="showquant()">
+							<div class="marketimg">
+								<img src="images/markus.jpg" />
+						  
+							</div>
+							<div class="marketdesc">
+								<table>
+									<tr>
+										<td>
+											<span class=" black">Coacoa</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="black"><i class="fa fa-pie-chart brand"></i> Gestation: 5 years</span>
+										</td>
+									</tr>
+								</table>
+								
+					
+							</div>
+						  
+						</div>
+		
+						<div class="eachmarket" onclick="showquant()">
+							<div class="marketimg">
+								<img src="images/markus.jpg" />
+						  
+							</div>
+							<div class="marketdesc">
+								<table>
+									<tr>
+										<td>
+											<span class=" black"><i class="fa fa-user brand"></i>Cashew</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="black"><i class="fa fa-pie-chart brand"></i> Gestation: 3 years</span>
+										</td>
+									</tr>
+								</table>
+								
+					
+							</div>
+						  
+						</div>
+		
+						<div class="eachmarket" onclick="showquant()">
+							<div class="marketimg">
+								<img src="images/markus.jpg" />
+						  
+							</div>
+							<div class="marketdesc">
+								<table>
+									<tr>
+										<td>
+											<span class=" black"><i class="fa fa-user brand"></i>Tigernut</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="black"><i class="fa fa-pie-chart brand"></i>  Gestation: 12 month</span>
+										</td>
+									</tr>
+								</table>
+								
+					
+							</div>
+						  
+						</div>
+				
+						
+						
+				
+		
+					</div>
+			
 
 		</div>
 
+	  </div>
+	  <div id="modal" class="hides">
+		  <div style="margin:auto">
+		<form action="home.html">
+
+			<div style="background-color: white;width: 80%; position: relative;border:2px solid seagreen">
+				<p style="color: #fff;" class="log-input-title">
+					Quantity
+				</p>
+				<input type="number" style="padding:18px 10px; width: 80%;border: none;margin:1px">
+			</div>
+			<br/> &nbsp; <br/>
+			<div style="background-color: white;width: 80%; position: relative;border:2px solid seagreen">
+				<p style="color: #fff;" class="log-input-title">
+					Breed
+				</p>
+				<input type="text" style="padding:18px 10px; width: 80%;border: none;margin:1px">
+			</div>
+			<br/> &nbsp; <br/>
+			<div style="background-color: white;width: 80%; position: relative;border:2px solid seagreen">
+				<p style="color: #fff;" class="log-input-title">
+					Location
+				</p>
+				<input type="text" style="padding:18px 10px; width: 80%;border: none;margin:1px">
+			</div>
+			<br/> &nbsp; <br/>
+			<div style="width: 80%;">
+				<input type="submit" value="GET QUOTATION" style="padding:20px 10px; width: 100%; background-color:seagreen;color:white;font-size: medium;">
+			</div>
+			<br/> &nbsp; <br/>
+		</form>
+	</div>
 	  </div>
 	 
 	  <div class="side-content">

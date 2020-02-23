@@ -8,8 +8,14 @@ const marketButton = document.querySelector("#market-tab");
 const mainContent = document.querySelector(".main-content");
 const sideContent = document.querySelector(".side-content");
 const sideMarket = document.querySelector(".side-market-content");
+const ctaquest = document.querySelector("#ctaarea");
+const titlequest = document.querySelector("#titlequest");
+const fchoice = document.querySelector("#choice-0");
+const schoice = document.querySelector("#choice-1");
 marketButton.addEventListener("click", pushmarket);
 farmerButton.addEventListener("click", push);
+fchoice.addEventListener("click", choicemade);
+schoice.addEventListener("click", choicemade);
 
 const farmersList = document.querySelector("#slidelist-0");
 const groupsList = document.querySelector("#slidelist-1");
@@ -38,7 +44,7 @@ function pushmarket() {
   
 }
 function draw() {
-  console.log("hiiiii");
+  //console.log("hiiiii");
   let clickedTopfull = this.id;
   let clickedTopId = clickedTopfull.replace("slidelist-","");
   let clickedTab = document.getElementById("side-"+clickedTopId);
@@ -46,11 +52,9 @@ function draw() {
   document.querySelector(".farmers-show").classList.replace("farmers-show","farmers-hide");
   clickedTab.classList.replace("farmers-hide","farmers-show");
   document.getElementById(this.id+"td").classList.add("farmers-nav-active")
-
-
 }
 function drawone() {
- console.log("one")
+ //console.log("one")
       groupsNames.classList.replace("farmers-show","farmers-hide")
       productsNames.classList.replace("farmers-show","farmers-hide")
       farmerNames.classList.replace("farmers-hide","farmers-show")
@@ -66,3 +70,39 @@ function drawthree() {
       farmerNames.classList.replace("farmers-show","farmers-hide")
       
   }
+  function choicemade() {
+  
+    let clickedTopful = this.id;
+    let clickedId = clickedTopful.replace("choice-","");
+    let marketchoice = sessionStorage.getItem("dufmamarketchoice");
+    console.log(marketchoice);
+    let clickTab = marketchoice === "buy" ? document.getElementById("picked-"+clickedId) : document.getElementById("pick-"+clickedId);
+    document.querySelector(".market-nav-active").classList.remove("market-nav-active")
+    document.querySelector(".market-show").classList.replace("market-show","market-hide");
+    clickTab.classList.replace("market-hide","market-show");
+    document.getElementById(this.id).classList.add("market-nav-active");
+  }
+  function makechoice(fft) {
+  
+    let clickedTopful =  fft;
+    let clickedId = clickedTopful.replace("choice-","");
+    let marketchoice = sessionStorage.getItem("dufmamarketchoice");
+    console.log(marketchoice);
+    let clickTab = marketchoice === "buy" ? document.getElementById("picked-"+clickedId) : document.getElementById("pick-"+clickedId);
+    document.querySelector(".market-nav-active").classList.remove("market-nav-active")
+    document.querySelector(".market-show").classList.replace("market-show","market-hide");
+    clickTab.classList.replace("market-hide","market-show");
+    document.getElementById("choice-0").classList.add("market-nav-active");
+  }
+ const cta = theid => {
+  let innertext = theid === "invest" ? 
+  "What do you want to invest in ?" :
+  "What do you want to buy?"
+  titlequest.innerHTML = innertext;
+  sessionStorage.setItem("dufmamarketchoice", theid);
+  ctaquest.classList.replace("hides","shows")
+  makechoice("choice-0");
+ }
+ const showquant = () => {
+   document.getElementById("modal").classList.replace("hides","shows");
+ }

@@ -145,6 +145,12 @@ header #home{
   top:0;
   transition:1s left;
 }
+.market-show{
+  display: block;
+}
+.market-hide{
+  display: none;
+}
 #topslid{
   min-height:20%;
 }
@@ -531,6 +537,66 @@ font-size: medium;
 #footer #mobile-foot, .mobile-menu{
   display:none;
 }
+.shows{
+  display: block;
+}
+.hides{
+  display: none;
+}
+.ctas{
+  width: calc(100% - 22px);
+  padding: 10px;
+  border:1px solid #ccc;
+}
+.twochoice, .clear{
+  width:100%;
+  float: none;
+  clear: both;
+}
+.rchoice{
+  width: calc(50% - 2px);
+  height: 40px;
+  display: table;
+  text-align: center;
+  background-color: #fff;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  float:left;
+  border: 1px solid #ccc;
+}
+.lchoice{
+  width: calc(50% - 2px);
+  height: 40px;
+  display: table;
+  text-align: center;
+  background-color: #fff;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  float:right;
+  border: 1px solid #ccc;
+}
+.rchoice div, .lchoice div{
+  margin: auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.market-nav-active{
+  background-color: seagreen;
+  color: #fff;
+  z-index: 1000000;
+}
+
+#modal{
+  top:0;
+  position: absolute;
+  height: 150%;
+  width: calc(100% - 40px);
+  background-color: rgba(0,0,0,0.9);
+  padding-top: 150px;
+  padding-left: 10%;
+}
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 600px) {
   .text {font-size: 11px}
