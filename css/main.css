@@ -606,6 +606,8 @@ font-size: medium;
   position:absolute;
   top:100px;
   height: 100%;
+  display: table;
+  vertical-align: middle;
   }
   .log-input-title{
     color: #fff;

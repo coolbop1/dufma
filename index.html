@@ -21,10 +21,11 @@
         </div>
           <div class="logform-right">
         <center>
-            <div style="padding-top: 10px">
+            <div style="padding-top: 10px; ">
                 <img src="images/logo.png" width="100" style="margin-bottom:30px">
-                 
-            <form action="home.html">
+
+                 <br/>&nbsp;<br/>
+            <!--<form action="home.html">
 
                 <div style="background-color: white;width: 80%; position: relative;border:2px solid seagreen">
                     <p class="log-input-title">
@@ -44,21 +45,33 @@
                     <input type="submit" value="Login" style="padding:20px 10px; width: 100%; background-color:seagreen;color:white;font-size: medium;">
                 </div>
                 <br/> &nbsp; <br/>
-            </form>
+            </form>-->
+            <button id="buy" onclick="gotomarket(this.id)" style="background-color: seagreen;color:white; font-weight: 500; font-size: large; padding: 15px; width: 80%;margin: auto;border-radius: 50px;margin: 50px 0">
+                MARKET PLACE
+            </button>
+            <br/>
+            <button id="invest" onclick="gotomarket(this.id)" style="background-color: seagreen;color:white; font-weight: 500; font-size: large; padding: 15px; width: 80%;margin: auto;border-radius: 50px;margin: 50px 0">
+                INVESTMENT
+            </button>
             </div>
         </center>
       
-        <p class="bottom-log-toogle" style="position: absolute; bottom: 8px; left:12px">
+        <!--<p class="bottom-log-toogle" style="position: absolute; bottom: 8px; left:12px">
             Forgot Password
         </p>
         <p class="bottom-log-toogle" style="position: absolute; bottom: 8px; right:12px">
             Create Account
-        </p>
+        </p>-->
         </div>
         <p class="bottom-log-toogle" style="position: absolute; bottom: 8px; top:10px;right:12px;font-weight:700">
             About Dufma
         </p>
         </section>
-
+<script>
+    const gotomarket = (theid) => {
+    sessionStorage.setItem("fromIndex", theid );
+   window.location.href = "home.html";
+ }
+</script>
     </body>
     </html>

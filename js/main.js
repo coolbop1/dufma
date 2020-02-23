@@ -3,6 +3,8 @@ menuIcon.addEventListener("click", draw);
 const darkOverlay = document.querySelector('#overlay');
 darkOverlay.addEventListener("click", push);
 */
+
+
 const farmerButton = document.querySelector("#farmer-tab");
 const marketButton = document.querySelector("#market-tab");
 const mainContent = document.querySelector(".main-content");
@@ -36,11 +38,12 @@ function push() {
   }
 }
 
-function pushmarket() {
+function pushmarket(clicked) {
   
     mainContent.classList.add("hide-main-content")
     sideMarket.classList.add("show-side-market-content")
-    sideContent.classList.remove("show-side-content")
+    sideContent.classList.remove("show-side-content");
+    clicked ? cta(clicked) : null;
   
 }
 function draw() {
@@ -87,7 +90,7 @@ function drawthree() {
     let clickedTopful =  fft;
     let clickedId = clickedTopful.replace("choice-","");
     let marketchoice = sessionStorage.getItem("dufmamarketchoice");
-    console.log(marketchoice);
+    //console.log(marketchoice);
     let clickTab = marketchoice === "buy" ? document.getElementById("picked-"+clickedId) : document.getElementById("pick-"+clickedId);
     document.querySelector(".market-nav-active").classList.remove("market-nav-active")
     document.querySelector(".market-show").classList.replace("market-show","market-hide");
@@ -106,3 +109,7 @@ function drawthree() {
  const showquant = () => {
    document.getElementById("modal").classList.replace("hides","shows");
  }
+ 
+ let fromindex = sessionStorage.getItem("fromIndex");
+fromindex ? pushmarket(fromindex) : null;
+sessionStorage.removeItem("fromIndex");
