@@ -201,6 +201,21 @@ header #home{
   float: left;
 }
 
+.marketdescs{
+  width: calc(40% - 10px);
+  padding-left: 10px;
+  overflow: hidden;
+  float: left;
+  display: table;
+  height: 100%;
+}
+
+.marketdescs div{
+  display: table-cell;
+  vertical-align: middle;
+  color: seagreen;
+}
+
 .marketdesc table tr{
   margin-top: 15px;
 }
@@ -217,7 +232,13 @@ header #home{
   float:left;
 }
 
-.thumb img,.groupimg img,.marketimg img{
+.marketimgs{
+  height: 100%;
+  width: 60%;
+  float:left;
+}
+
+.thumb img,.groupimg img,.marketimg img, .marketimgs img{
   height:100%;
   width:100%;
   object-fit:cover;
